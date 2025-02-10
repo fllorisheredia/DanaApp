@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Ayuda - Ayuda DANA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<div class="navbar">
+    <div class="navbar-links">
+        <a href="index.html">Inicio</a>
+        <a href="#about">About</a>
+        <a href="servicios.html">Servicios</a>
+    </div>
+    <button id="toggleFormBtn" class="button">Registro</button>
+</div>
+
+
+    <!-- Contenedor del formulario -->
+    <!-- Fondo semitransparente y contenedor del formulario -->
+    <div class="form-overlay" id="formOverlay">
+        <div id="loginFormContainer" class="form-container">
+            <div class="close-btn" id="closeFormBtn">&times;</div> <!-- Botón de cerrar -->
+            <form action="#" method="post">
+                <div class="imgcontainer">
+                    <img src="https://via.placeholder.com/150" alt="Avatar" class="avatar">
+                </div>
+                <div class="container">
+                    <label for="uname"><b>Nombre de usuario</b></label>
+                    <input type="text" placeholder="Introducir nombre de usuario" name="uname" required>
+                    <label for="psw"><b>Contraseña</b></label>
+                    <input type="password" placeholder="Introducir contraseña" name="psw" required>
+                    <button type="submit" class="access-btn">Acceso</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Acuérdate de mí
+                    </label>
+                </div>
+                <div class="social-login">
+                    <p>O inicia sesión con:</p>
+                    <button class="google-btn">Google</button>
+                    <button class="apple-btn">Apple</button>
+                    <button class="facebook-btn">Facebook</button>
+                </div>
+                <div class="container cancel-container">
+                    <button type="button" class="cancelbtn">Cancelar</button>
+                    <span class="psw">¿Has olvidado <a href="#">tu contraseña?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<!-- Contenido principal -->
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Solicitar Ayuda</h1>
+    <p class="text-center mb-5">Si necesitas asistencia, por favor completa el siguiente formulario y se añadira su solicitud.</p>
+
+    <form id="solicitarAyudaForm">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre Completo</label>
+            <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="mb-3">
+            <label for="telefono" class="form-label">Número de Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="tipoAyuda" class="form-label">Categoria de la Urgencia</label>
+            <select class="form-select" id="tipoAyuda" required>
+                <option value="">Selecciona una opción</option>
+                <option value="alta"> Necesidad de ayuda Inmedita</option>
+                <option value="media"> Puede esperar</option>
+                <option value="baja">No es urgente</option>
+              
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="tipoAyuda" class="form-label">Tipo de Ayuda Necesaria</label>
+            <select class="form-select" id="tipoAyuda" required>
+                <option value="">Selecciona una opción</option>
+                <option value="alojamiento">Alojamiento Temporal</option>
+                <option value="suministros">Suministros y Material</option>
+                <option value="transporte">Transporte</option>
+                <option value="asistenciaMedica">Asistencia Médica</option>
+                <option value="apoyoPsicologico">Apoyo Psicológico</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción de la Necesidad</label>
+            <textarea class="form-control" id="descripcion" rows="4" required></textarea>
+        </div>
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

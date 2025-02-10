@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Con es css le damos forma al texto central -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Inicio</title>
+  </head>
+  <body>
+    <!-- NavBar -->
+    <div class="navbar">
+      <div class="navbar-links">
+        <a href="#home">Inicio</a>
+        <a href="#about">About</a>
+        <a href="servicios.html">Servicios</a>
+      </div>
+      <button id="toggleFormBtn" class="button">Registro</button>
+    </div>
+
+
+
+    <!-- Contenedor del formulario -->
+    <!-- Fondo semitransparente y contenedor del formulario -->
+    <div class="form-overlay" id="formOverlay">
+      <div id="loginFormContainer" class="form-container">
+        <div class="close-btn" id="closeFormBtn">&times;</div>
+        <!-- Botón de cerrar -->
+        <form action="#" method="post">
+          <div class="imgcontainer">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Avatar"
+              class="avatar"
+            />
+          </div>
+          <div class="container">
+            <label for="uname"><b>Nombre de usuario</b></label>
+            <input
+              type="text"
+              placeholder="Introducir nombre de usuario"
+              name="uname"
+              required
+            />
+            <label for="psw"><b>Contraseña</b></label>
+            <input
+              type="password"
+              placeholder="Introducir contraseña"
+              name="psw"
+              required
+            />
+            <button type="submit" class="access-btn">Acceso</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember" />
+              Acuérdate de mí
+            </label>
+          </div>
+          <div class="social-login">
+            <p>O inicia sesión con:</p>
+            <button class="google-btn">Google</button>
+            <button class="apple-btn">Apple</button>
+            <button class="facebook-btn">Facebook</button>
+          </div>
+          <div class="container cancel-container">
+            <button type="button" class="cancelbtn">Cancelar</button>
+            <span class="psw"
+              >¿Has olvidado <a href="#">tu contraseña?</a></span
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Mensaje para personas con difilcutades. -->
+    <div class="alert alert-danger text-center" role="alert">
+      <strong>PARA PERSONAS CON DIFICULTADES TÉCNICAS</strong><br />
+      ¡Porfavor dirjase al centro de cordinacion mas cercano.
+      <a href="plantilla.html"> Centros de coordinacion</a>
+    </div>
+<!-- Mensaje de presentacion -->
+    <div class="container mt-5">
+  
+      <form id="solicitarAyudaForm">
+    
+         <div>
+          <h1 class="text-center mb-4">Presentación</h1>
+          <p class=" mb-5 text-body">¡
+            Somos Paula Benlloch, Hugo Catalán, Saúl Pérez y Fernando Lloris, estudiantes de 1º Año del Ciclo Formativo de Desarrollo de Aplicaciones Multiplataforma (DAM) en el IES Camp de Morvedre. Nuestra pasión por la tecnología y el desarrollo de software nos ha llevado a embarcarnos en un proyecto con un fuerte compromiso social.
+
+            Nuestro proyecto, "Ayuda DANA", nace con el propósito de mejorar la organización y gestión de la ayuda tras la DANA sufrida el año pasado en Valencia. Esta catástrofe dejó a muchas personas en situaciones de vulnerabilidad, y creemos que la tecnología puede desempeñar un papel clave en la coordinación de los recursos y voluntarios para optimizar la asistencia.
+            
+            La plataforma que estamos desarrollando permitirá a los afectados solicitar ayuda de manera sencilla y eficiente, mientras que los voluntarios y organizaciones podrán ofrecer sus recursos y servicios de forma organizada. Nuestro objetivo es crear una herramienta intuitiva, accesible y eficaz que sirva como punto de encuentro entre quienes necesitan ayuda y quienes están dispuestos a brindarla.
+            
+            Creemos en la tecnología como un motor de cambio y en el poder de la comunidad para superar las adversidades. Con "Ayuda DANA", buscamos aportar nuestro granito de arena para que, en futuras situaciones de emergencia, la respuesta sea más rápida, coordinada y efectiva.
+
+
+          </p>
+         </div>
+      </form>
+  </div>
+  
+
+    <!--<a href="mailto:info@ayudadana.es" class="alert-link">info@ayudadana.es</a>. -->
+
+    <!-- Contenido principal -->
+    <div class="container mt-4">
+      <!-- Fila 1 -->
+      <div class="row g-4">
+        <div class="col-md-4">
+          <button class="service-btn service-warning">
+            <h5>Casos activos</h5>
+            <p>Observa los casos activos</p>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button
+            class="service-btn service-danger"
+            onclick="window.location.href='solicitarAyuda.html'"
+          >
+            <h5>Necesito Ayuda</h5>
+            <p>Solicita asistencia urgente</p>
+            <span class="badge bg-danger">Prioritario</span>
+            <a href="solicitarAyuda.html"></a>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="service-btn service-primary">
+            <h5>Desaparecidos y Extravíos</h5>
+            <p>Reportar o buscar personas, animales y vehículos</p>
+            <span class="badge bg-danger">Prioritario</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Fila 2 -->
+      <div class="row g-4 mt-2">
+        <div class="col-md-4">
+          <button class="service-btn service-info">
+            <h5>Voluntómetro</h5>
+            <p>Mira los voluntarios</p>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="service-btn service-success">
+            <h5>Quiero Ayudar</h5>
+            <p>Regístrate como voluntario</p>
+            <span class="badge bg-danger">Prioritario</span>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="service-btn service-secondary">
+            <h5>Puntos de Recogida</h5>
+            <p>Gestionar donaciones</p>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script>
+      if (!localStorage.getItem("userLogged")) {
+          window.location.href = "sesion.html"; // Redirige a la página de login si no ha iniciado sesión
+      }
+  </script> -->
+  
+  </body>
+</html>
